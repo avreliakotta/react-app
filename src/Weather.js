@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import "./Weather.css";
- import axios from 'axios';
+import axios from 'axios';
+ import {ColorRing} from 'react-loader-spinner'
 
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({ true: false });
@@ -62,6 +63,14 @@ export default function Weather() {
             let city = "London";
             let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
             axios.get(apiUrl).then(handleResponse);
-            return "Loading..."
+            return <ColorRing
+  visible={true}
+  height="80"
+  width="80"
+  ariaLabel="blocks-loading"
+  wrapperStyle={{}}
+  wrapperClass="blocks-wrapper"
+  colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+/>
         }
     }
