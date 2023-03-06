@@ -1,9 +1,11 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 import axios from 'axios';
- import {ColorRing} from 'react-loader-spinner'
+import { ColorRing } from 'react-loader-spinner';
 
-export default function Weather() {
+
+export default function Weather(props) {
     const [weatherData, setWeatherData] = useState({ true: false });
 
     function handleResponse(response) {
@@ -17,7 +19,7 @@ export default function Weather() {
             icon_url: "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png",
             humidity: response.data.temperature.humidity,
         
-            data:"Fiday 19:30"
+            date:new Date(response.data.time*1000)
         });
     }
         if (weatherData.ready) {
@@ -36,7 +38,7 @@ export default function Weather() {
             </form >
             <h1>{weatherData.city}</h1>
             <ul className="list text-capitalize">
-                <li>{weatherData.data}</li>
+                        <li><FormattedDate date={weatherData.date} /></li>
                 <li>{weatherData.description}</li>
             </ul>
             < div className="row mt-3">
@@ -60,8 +62,8 @@ export default function Weather() {
     );
         } else {
             let apiKey = "9ba75f9bf64d65ecbfcf60t3o5b4f10a";
-            let city = "London";
-            let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+            
+            let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
             axios.get(apiUrl).then(handleResponse);
             return <ColorRing
   visible={true}
