@@ -18,7 +18,7 @@ const [weatherData, setWeatherData] = useState({ true: false });
             wind: response.data.wind.speed,
             city: response.data.city,
             description: response.data.condition.description,
-            icon_url: "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png",
+            icon: response.data.condition.icon,
             humidity: response.data.temperature.humidity,
         
             date:new Date(response.data.time*1000)
