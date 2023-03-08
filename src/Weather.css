@@ -24,24 +24,30 @@
   line-height: 1.2;
   font-weight: 500;
   color: #70757a;
+  margin-bottom: 10px;
 }
 .Weather form {
   margin-bottom: 20px;
 }
 .Weather .temperature {
-  font-size: 52px;
+  font-size: 64px;
   color: rgb(33, 33, 33);
   line-height: 1;
   font-weight: 400;
-  display: inline;
+  display: block;
+  margin-left: 50px;
+  margin-top: -64px;
 }
 .Weather .unit {
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
   position: relative;
-  top: -34px;
-  margin-left: 5px;
+  top: -57px;
+  margin-left: 115px;
   width: 64px;
   color: rgb(33, 33, 33);
+}
+.Weather img {
+  margin-top: 10px;
 }
