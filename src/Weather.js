@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 import axios from 'axios';
 import { ColorRing } from 'react-loader-spinner';
@@ -55,6 +56,7 @@ const [weatherData, setWeatherData] = useState({ true: false });
                 </div>
                     </form >
                     <WeatherInfo data={weatherData} />
+                    <WeatherForecast />
             
         </div >
     
