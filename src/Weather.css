@@ -35,7 +35,7 @@
   line-height: 1;
   font-weight: 400;
   display: block;
-  margin-left: 44px;
+  margin-left: 50px;
   margin-top: -64px;
 }
 .Weather .unit {
@@ -44,7 +44,7 @@
   line-height: 1;
   position: relative;
   top: -57px;
-  margin-left: 115px;
+  margin-left: 118px;
   width: 64px;
   color: rgb(33, 33, 33);
 }
