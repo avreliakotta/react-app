@@ -17,6 +17,7 @@
 .Weather ul {
   margin: 0;
   padding: 0;
+  margin-bottom: 30px;
 }
 .Weather .list li {
   list-style-type: none;
@@ -35,7 +36,7 @@
   font-weight: 400;
   display: block;
   margin-left: 52px;
-  margin-top: -50px;
+  margin-top: -60px;
 }
 .Weather .unit {
   font-size: 16px;
