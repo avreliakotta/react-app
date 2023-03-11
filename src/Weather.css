@@ -10,10 +10,10 @@
   color: rgb(33, 33, 33);
   font-size: 32px;
   font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 10 px;
 }
-.Weather .float-left {
-  display: inline;
-}
+
 .Weather ul {
   margin: 0;
   padding: 0;
@@ -24,7 +24,6 @@
   line-height: 1.2;
   font-weight: 500;
   color: #70757a;
-  margin-bottom: 10px;
 }
 .Weather form {
   margin-bottom: 20px;
@@ -35,19 +34,19 @@
   line-height: 1;
   font-weight: 400;
   display: block;
-  margin-left: 50px;
-  margin-top: -64px;
+  margin-left: 52px;
+  margin-top: -50px;
 }
 .Weather .unit {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
   position: relative;
   top: -57px;
-  margin-left: 118px;
+  margin-left: 120px;
   width: 64px;
   color: rgb(33, 33, 33);
 }
 .Weather img {
-  margin-top: 10px;
+  display: inline-block;
 }
